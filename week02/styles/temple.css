@@ -1,0 +1,59 @@
+body {
+    width: 600px;
+    margin: auto;
+    font-family: lato, sans-serif;
+}
+
+main {
+    width: 300px;
+    margin: auto;
+}
+
+header p,
+footer p {
+    padding: 15px;
+    color: black;
+    background-color: antiquewhite;
+    text-align: center;
+    width: 70%;
+    margin: 10px auto;
+}
+
+footer {
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 26px;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    box-shadow: 0px 0px 30px lightgray;
+}
+
+section {
+    background-color: gainsboro;
+    max-width: 100%;
+    margin: 25px auto;
+    padding: 5px 20px;
+
+    box-sizing: border-box;
+    font-size: 0.7em;
+    color: black;
+}
+
+h2 {
+    font-size: 1.3em;
+    padding: 3px;
+    border-bottom: 1px solid black;
+}
+
+section p {
+    margin-left: 10px;
+}
+
+section ul {
+    margin-left: -20px;
+}
