@@ -1,5 +1,5 @@
 body {
-    background-color: white;
+    background-color: antiquewhite;
 }
 
 nav {
@@ -10,17 +10,22 @@ nav {
 nav a {
     color: black;
     padding: 20px;
-    display: inline-block;
+    display: block;
 }
 
 h1 {
     color: black;
 }
 
+main {
+    max-width: 100%;
+}
+
 main img {
     width: 300px;
     height: auto;
     padding: 0;
+    border: 1px solid white;
     box-shadow: 0 0 10px gray;
 }
 
@@ -32,8 +37,8 @@ aside {
     width: 100%;
     margin: auto;
     border: none;
-    padding: none;
-    background-color: none;
+    padding: 5px;
+    background-color: antiquewhite;
     color: black;
 }
 
@@ -43,9 +48,9 @@ aside img {
 }
 
 footer {
-    margin: 10px auto;
+    margin-top: 10px;
+    border-top: 1px solid black;
     text-align: center;
-    background-color: lightgray;
     padding: 1px;
     font-size: 16px;
     max-width: 100%;
