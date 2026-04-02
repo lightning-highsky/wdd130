@@ -1,5 +1,4 @@
 :root {
-    --primary-background-color: oklch(from rgb(168, 201, 168) l c h);
     --primary-font-color: oklch(from black l c h);
     --secondary-font-color: oklch(from white l c h);
     --heading-font: Times New Roman, serif;
@@ -76,7 +75,7 @@ nav a {
     height: auto;
 }
 
-h1 {
+.hero h1 {
     position: absolute;
     top: 50px;
     left: 70px;
@@ -85,7 +84,7 @@ h1 {
     font-size: 2.5rem;
 }
 
-article {
+.hero article {
     position: absolute;
     background-color: beige;
     margin: 0;
