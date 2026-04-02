@@ -1,7 +1,7 @@
 :root {
-    --primary-background-color: oklch(from #055a05 l c h);
-    --secondary-background-color: oklch(from #f4a261 l c h);
-    --font-color: oklch(from black l c h);
+    --primary-background-color: oklch(from rgb(168, 201, 168) l c h);
+    --primary-font-color: oklch(from black l c h);
+    --secondary-font-color: oklch(from white l c h);
     --heading-font: Times New Roman, serif;
     --body-font: Arial, sans-serif;
 }
@@ -37,7 +37,29 @@ section,
 article {
     margin: 16px;
     padding: 8px;
+    color: var(--primary-font-color, black)
+}
 
+nav {
+    margin: 0;
+    padding: 15px;
+    background-color: lightgray;
+}
+
+nav img {
+    max-width: 80px;
+    height: auto;
+    margin-left: 40px;
+    display: inline-block;
+}
+
+nav a {
+    color: var(--main-color, black);
+    display: inline-block;
+    padding: 5px;
+    margin: var(--main-margin, 15px);
+    text-decoration: none;
+    font-size: 18px;
 }
 
 .socialmedia a {
@@ -89,4 +111,5 @@ section p {
 
 footer img {
     max-width: 60px;
+    height: auto;
 }
