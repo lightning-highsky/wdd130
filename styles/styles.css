@@ -1,10 +1,19 @@
 :root {
     font-size: 16px;
-    --main-margin: 15px;
-    --main-padding: 10px;
-    --main-color: black;
-    --secondary-background-color: oklch(from rgb(168, 201, 168) l c h);
-    --paragraph-font-size: 1rem;
+    --primary-bg-color: oklch(from #F2EDC2 l c h);
+    --secondary-bg-color: oklch(from #9FCB98 l c h);
+    --tertiary-bg-color: oklch(from #79AE6F l c h);
+    --4th-bg-color: oklch(from #346739 l c h);
+    --primary-margin: 1em;
+    --primary-padding: 1em;
+    --primary-font-family: Times New Roman, Georgia;
+    --secondary-font-family: Helvetica, Arial;
+    --nav-font-size: 1.1rem;
+    --h1-font-size: 1.8rem;
+    --h2-font-size: 1.6rem;
+    --primary-p-font-size: 1rem;
+    --primary-color: oklch(from black l c h);
+    --secondary-color: oklch(from white l c h);
 }
 
 * {
@@ -15,114 +24,160 @@
 }
 
 body {
-    background-color: white;
+    background-color: var(--primary-bg-color, oklch(from #F2EDC2 l c h));
 }
 
 nav {
-    background-color: var(--secondary-background-color, oklch(from rgb(168, 201, 168) l c h));
-    margin: var(--main-margin, 15px);
-    padding: var(--main-padding, 10px);
+    display: flex;
+    flex-flow: row / no-wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--secondary-bg-color, oklch(from #9FCB98 l c h));
+    margin-bottom: var(--primary-margin, 1em);
+    padding: 0.5rem;
 }
 
 nav a {
-    color: var(--main-color, black);
-    display: inline-block;
-    padding: 5px;
-    margin: var(--main-margin, 15px);
+    margin: var(--main-margin, 1em);
+    font-family: var(--primary-font-family, Times New Roman, Georgia);
+    font-size: var(--nav-font-size, 1.1rem);
+    color: var(--primary-color, oklch(from black l c h));
 }
 
 main {
-    max-width: 100%;
-    margin: var(--main-margin, 15px);
-    padding: var(--main-padding, 10px);
+    max-width: 80%;
+    margin: 2rem auto;
+}
+
+.reg-div {
+    max-width: 70%;
+    background-color: var(--tertiary-bg-color, oklch(from #79AE6F l c h));
+    margin: 0 auto 2rem auto;
+    border-radius: 2.5rem;
 }
 
 h1 {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-family: var(--primary-font-family, Times New Roman, Georgia);
+    font-size: var(--h1-font-size, 1.8rem);
     color: var(--main-color, black);
-    font-size: 1.9rem;
-    margin: 0 15px 15px 15px;
-    padding: var(--main-padding, 10px);
+    border-bottom: 0.1rem dashed black;
 }
 
 main img {
-    max-width: 250px;
-    height: auto;
-    border: 1px solid white;
-    border-radius: 25px;
-    box-shadow: -5px 5px 15px gray;
-    margin: 15px 320px 15px 5px;
     float: right;
     clear: right;
+    max-width: 230px;
+    height: auto;
+    margin: 5rem 4.5% 2rem 1.5%;
+    border: 1px solid white;
+    border-radius: 25px;
+    box-shadow: -5px 5px 15px darkgray;
 }
 
 main p {
     display: inline-block;
-    max-width: 420px;
+    max-width: 60%;
+    font-family: var(--secondary-font-family, Helvetica, Arial);
     font-size: var(--paragraph-font-size, 1rem);
-    margin: 40px 10px 15px 250px;
+    margin: 2rem 1rem 7% 4%;
     padding: var(--main-padding, 10px);
     text-align: justify;
     border-bottom: 1px solid black;
 }
 
+#first-ul {
+    max-width: 70%;
+    height: auto;
+    background-color: beige;
+    margin: 0 auto;
+    border: 0.1rem dashed black;
+}
+
 main h2 {
-    margin: 20px 15px 0 15px;
-    padding: 15px 15px 0 15px;
+    margin: 0.4% auto 0 1.7%;
+    padding: 8px;
+    font-family: var(--primary-font-family, Times New Roman, Georgia);
+    font-size: var(--h2-font-size, 1.6rem);
 }
 
 main li {
     display: inline-block;
-    margin: 5px 30px;
-    border: 1px dashed black;
-    padding: 15px;
+    margin: 5px 30px 10px 30px;
+    padding: 12px 12px 8px 12px;
+    border-bottom: 1px solid black;
 }
 
 aside {
     max-width: 100%;
     display: flex;
-    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
 
+.box {
+    background-color: oklch(from white l c h);
+    padding: var(--primary-padding, 1rem);
+    color: var(--primary-color, black);
 }
 
 aside img {
     width: 200px;
     height: auto;
-    border-radius: 100px;
-    display: block;
-    margin: 20px auto 20px 300px;
+    border-radius: 50%;
+    margin: 1% 0 1% auto;
+}
+
+.aside-text {
+    max-width: 30%;
+    margin: auto;
 }
 
 aside h2 {
-    margin: 45px 250px 10px auto;
+    margin: 3% auto;
+    font-family: var(--primary-font-family, Times New Roman, Georgia);
+    font-size: var(--h2-font-size, 1.6rem);
     text-align: center;
 }
 
 aside p {
-    width: 380px;
-    margin: 15px 250px 10px auto;
     text-align: justify;
+    font-family: var(--secondary-font-family, Helvetica, Arial);
+    font-size: var(--paragraph-font-size, 1rem);
 }
 
 footer {
-    position: fixed;
     max-width: 100%;
-    text-align: center;
-    background-color: oklch(from lightgray l c h);
-    margin-top: 25px;
-    border-top: 1px dashed black;
+    background-color: var(--4th-bg-color, oklch(from #346739 l c h));
     padding: 25px;
-    font-size: 1rem;
+    font-family: var(--secondary-font-family, Helvetica, Arial);
+    font-size: var(--paragraph-font-size, 1rem);
+    color: var(--secondary-color, white);
+    text-align: center;
+    border-top: 1px dashed black;
 }
 
-/* Class Selectors */
-
-.box {
-    background-color: oklch(from rgb(168, 201, 168) l c h);
-    margin: var(--main-margin, 15px);
-    padding: var(--main-padding, 10px);
-    color: var(--main-color, black);
+.grid,
+header,
+footer {
+    max-width: 840px;
+    margin: 0 auto;
 }
 
-main .box {
-    background-color: oklch(from white l c h);
+.grid {
+    display: grid;
+    align-items: center;
+}
+
+main {
+    grid-column: 2/3;
+    margin: 1rem;
+}
+
+aside {
+    grid-column: 1/2;
+    grid-row: 1/2;
 }
